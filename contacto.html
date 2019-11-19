@@ -1,100 +1,201 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
 <title>Accessibility 101</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-GB" />
 <link rel="stylesheet" href='style1/screen.css' type="text/css" />
 <style type="text/css" media="screen">
 <!--
 @import url("style1/p7pmh8.css");
 -->
+
+::-webkit-input-placeholder {
+	 color: #767676;
+	 opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	 color: #767676;
+	 opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	 color: #767676;
+	 opacity: 1;
+}
+
+:-ms-input-placeholder {
+	 color: #767676;
+	 opacity: 1;
+}
+
+.contact{
+text-align: center;
+text-size-adjust: 18px;
+
+}
+
+#contact {
+  text-align: center !important;
+text-size-adjust: 18px !important;
+margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 2px;
+    padding-top: 10px;
+}
+
+#footercontainer {
+    width: 95%;
+    height: 100px;
+    text-align: right;
+    background: transparent;
+    border-top: 1px solid #c30;
+    margin: 0 auto 0 auto;
+    border-left-color: #999999;
+    border-left-width: 1px;
+    border-right-color: #999999;
+    border-bottom-color: #999999;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-top-color: #A4BE2D;
+    border-top-style: dotted;
+    border-top-width: 1px;
+    color: #666666;
+    background-repeat: no-repeat;
+    line-height: 15px;
+    padding-bottom: 10px;
+    clear: both;
+    padding-top: 25px;
+}
+
+input, textarea {
+    background: #F3F6ED;
+    border: #E1D6C6 1px solid;
+    padding: 5px;
+    margin: 5px;
+    width: 60%;
+}
+}
+
+
 </style>
+<script>
+  function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+  </script>
 </head>
 <body onload="P7_initPM(1,8,0,0,10)">
 <div id="header-holder">
-  <div id="logo" >
-    <form method="get" action="http://www.google.co.uk/custom" target="google_window">
-      <a href="#deflhs">Skip Links</a>
-      <label for="q"> &gt;</label>
-      <input type="text" name="q" size="15" maxlength="255" id="q" value="Search" />
-      <input type="submit" name="sa" value="Search" />
-    </form>
+  <img src="./style1/template-images/logo.PNG" alt="Fundación FUPERCIBV"> 
   </div>
 </div>
 <div class="clearme" id="navcontainer">
   <ul id="p7PMnav">
-    <li><a href="http://all-free-download.com/free-website-templates/">Home</a></li>
-    <li><a href="http://all-free-download.com/free-website-templates/">Link1</a></li>
-    <li><a href="http://all-free-download.com/free-website-templates/">Link2</a></li>
-    <li><a href="http://all-free-download.com/free-website-templates/">Link3</a></li>
-    <li><a href="http://all-free-download.com/free-website-templates/">Link4</a></li>
-    <li><a href="http://all-free-download.com/free-website-templates/">Link5</a> </li>
+    <li><a class="active" href="index.html">Inicio</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="experiencias.html">Experiencias</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="acerca.html">Acerca de</a></li>
     <!--[if lte IE 6]><style>#p7PMnav a{height:1em;}#p7PMnav li{height:1em;}#p7PMnav ul li{float:left;clear:both;width:100%}</style><![endif]-->
   </ul>
 </div>
-<div class="clearme" id="page-banner-default">
-  <div id="floatright"> </div>
-</div>
-<div id="pagecontent">
-  <div id="deflhs">
-    <blockquote class="floatblockquote"> You now have a legal obligation - following the implementation of section 21 of the Disability Discrimination Act - to make reasonable adjustments to ensure blind and partially sighted people can access your service. <strong>RNIB, 2005 </strong></blockquote>
-    <h1>Here's your free template! </h1>
-    <p>This is just an example of what you can do with css. </p>
-    <h2>Do you have an accessible site? </h2>
-    <p>All you need to do is leave one of the accessibility badges (or buttons at the foot of the page) on the template and you can do what you want with it! </p>
-    <blockquote>A disabled person can make a claim against you if your website makes it impossible or unreasonably difficult to access information and services. If you have not made reasonable adjustments and cannot show that this failure is justified, then you may be liable under the Act, and may have to pay compensation and be ordered by a court to change your site. <strong>RNIB 2005</strong> </blockquote>
-    <h2>Enjoy!</h2>
-    <code> <strong>We've added a few things over the last year so you can easily highlight regions, like so!</strong></code> </div>
-  <div id="defrhs2"><br />
-    <h3>Web Design Articles </h3>
-    <ul title="Recent Website Design Articles">
-      <li><a href="http://all-free-download.com/free-website-templates/">Web Accessibility Fact Sheet </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">PAS 78</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">SENDA Compliant Website Design </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">CSS Tips Sheet </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">What is the Best Screen Size to Design To? </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">What is the Best Font to Use? And Which Size? </a></li>
-    </ul>
-    <p><br />
-    </p>
+
+
+
+</br> </br>
+
+
+
+
+<div class="col-sm-12">
+  <h1 style="text-align: center;">Contactenos</h1>
+  <div class="contact" id="contact"></div>
+
+  <form method="get" action="http://www.google.co.uk/custom" target="google_window">
+   
+    <div style="width: 900px; align-content: center; text-align: center;">
+      <label for="nombre">Nombre:</label> <input type="text" name="nombre" id="nombre" placeholder="Su nombre">
+    </div>
+    <div style="width: 900px; align-content: center;">
+      <label for="email">Correo:</label> <input type="text" name="email" id="email" placeholder="joe@example.com">
+    </div>
+  
+    <div style="width: 900px; align-content: center;">
+      <label for="asunto">Asunto:</label> <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+    </div>
+
+    <div style="width: 900px; align-content: center;">
+      <label for="mensaje">Mensaje:</label><textarea id="mensaje" name="mensaje"></textarea>
+    </div>
+
+ 
+
+
+    
+
+
+    
+  </form>
+  
   </div>
 </div>
+
+
+<div class="col-sm-8">
+
+    <h2 style="text-align: center;">Nuestra ubicación</h2>
+
+  <img src="style1/template-images/mapa.png"
+     alt="Ubicación de la fundación">
+</div>
+
+<div class="col-sm-4">
+    <h3 style="text-align: center;">Información de contacto</h3>
+
+    <h5 style="text-align: center;">Teléfono: 8888 - 8888</h5>
+    <h5 style="text-align: center;">Dirección de correo electrónico: info@fundacion.org.cr</h5>
+     
+</div>
+
+</br>
+</br>
+
+
+
+
+
 <!-- // CONTENT END -->
 <!-- // FOOTER START -->
 <div id="footercontainer">
-  <div id="linkbuttons"> <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/website-design-comply-wcag.gif" alt="" width="88" height="31" border="0" align="left" /></a> | <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/accessibility-101.gif" align="right" alt="" width="88" height="31" /></a> | <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/web-design-directory.gif" align="right" alt="" width="88" height="31" /></a></div>
-  <strong class="mediumfont">Telephone XXX XXX XXX </strong><strong> <br />
+  <strong class="mediumfont">Telefono: 88888888 </strong><strong> <br />
   <br />
-  Accessible website design is basically 'good website design' - RNIB<br />
-  </strong>Accessibility 101 - Accessible Web Site Design information<br />
-  <strong>Contact Us; <a href="mailto:info@accessibility101.org.uk">info@accessibility101.org.uk</a></strong> <br />
-  <script language="JavaScript" type="text/javascript">
-<!--//Date Stamp
-		var dayArray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-		var monthArray = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-		var lastUpdate = new Date(document.lastModified);
-		var thisDay=dayArray[lastUpdate.getDay()];
-		var thisDate=lastUpdate.getDate() < 10 ? '0'+lastUpdate.getDate() : lastUpdate.getDate();
-		var thisMonth=monthArray[lastUpdate.getMonth()];
-		var thisMonthNum=lastUpdate.getMonth()+1 < 10 ? '0'+ (lastUpdate.getMonth()+1) : lastUpdate.getMonth()+1;
-		var thisFullYear=String(lastUpdate.getFullYear());
-		var thisYear= thisFullYear.charAt(2) + thisFullYear.charAt(3);
-
-		document.write("Updated  ");
-		document.write(thisDay + ', ' + thisDate + '/' + thisMonthNum + '/' + thisYear);
-//-->
-   </script>
-  <div id="footerlinks">
-    <ul>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-    </ul>
-  </div>
+  <strong>Contactenos: <a href="mailto:info@fundacion.org.cr">info@fundacion.org.cr</a></strong> <br />
+  <strong>Direccion: </strong><span> Outlet Mall en San Pedro Montes de Oca</span>
 </div>
-<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
 </html>
