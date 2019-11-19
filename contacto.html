@@ -9,6 +9,76 @@
 <!--
 @import url("style1/p7pmh8.css");
 -->
+
+::-webkit-input-placeholder {
+	 color: #767676;
+	 opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	 color: #767676;
+	 opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	 color: #767676;
+	 opacity: 1;
+}
+
+:-ms-input-placeholder {
+	 color: #767676;
+	 opacity: 1;
+}
+
+.contact{
+text-align: center;
+text-size-adjust: 18px;
+
+}
+
+#contact {
+  text-align: center !important;
+text-size-adjust: 18px !important;
+margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 2px;
+    padding-top: 10px;
+}
+
+#footercontainer {
+    width: 95%;
+    height: 100px;
+    text-align: right;
+    background: transparent;
+    border-top: 1px solid #c30;
+    margin: 0 auto 0 auto;
+    border-left-color: #999999;
+    border-left-width: 1px;
+    border-right-color: #999999;
+    border-bottom-color: #999999;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-top-color: #A4BE2D;
+    border-top-style: dotted;
+    border-top-width: 1px;
+    color: #666666;
+    background-repeat: no-repeat;
+    line-height: 15px;
+    padding-bottom: 10px;
+    clear: both;
+    padding-top: 25px;
+}
+
+input, textarea {
+    background: #F3F6ED;
+    border: #E1D6C6 1px solid;
+    padding: 5px;
+    margin: 5px;
+    width: 60%;
+}
+}
+
+
 </style>
 </head>
 <body onload="P7_initPM(1,8,0,0,10)">
@@ -22,6 +92,7 @@
     </form>
   </div>
 </div>
+
 <div class="clearme" id="navcontainer">
   <ul id="p7PMnav">
     <li><a href="http://all-free-download.com/free-website-templates/">Home</a></li>
@@ -33,37 +104,68 @@
     <!--[if lte IE 6]><style>#p7PMnav a{height:1em;}#p7PMnav li{height:1em;}#p7PMnav ul li{float:left;clear:both;width:100%}</style><![endif]-->
   </ul>
 </div>
-<div class="clearme" id="page-banner-default">
-  <div id="floatright"> </div>
-</div>
-<div id="pagecontent">
-  <div id="deflhs">
-    <blockquote class="floatblockquote"> You now have a legal obligation - following the implementation of section 21 of the Disability Discrimination Act - to make reasonable adjustments to ensure blind and partially sighted people can access your service. <strong>RNIB, 2005 </strong></blockquote>
-    <h1>Here's your free template! </h1>
-    <p>This is just an example of what you can do with css. </p>
-    <h2>Do you have an accessible site? </h2>
-    <p>All you need to do is leave one of the accessibility badges (or buttons at the foot of the page) on the template and you can do what you want with it! </p>
-    <blockquote>A disabled person can make a claim against you if your website makes it impossible or unreasonably difficult to access information and services. If you have not made reasonable adjustments and cannot show that this failure is justified, then you may be liable under the Act, and may have to pay compensation and be ordered by a court to change your site. <strong>RNIB 2005</strong> </blockquote>
-    <h2>Enjoy!</h2>
-    <code> <strong>We've added a few things over the last year so you can easily highlight regions, like so!</strong></code> </div>
-  <div id="defrhs2"><br />
-    <h3>Web Design Articles </h3>
-    <ul title="Recent Website Design Articles">
-      <li><a href="http://all-free-download.com/free-website-templates/">Web Accessibility Fact Sheet </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">PAS 78</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">SENDA Compliant Website Design </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">CSS Tips Sheet </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">What is the Best Screen Size to Design To? </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">What is the Best Font to Use? And Which Size? </a></li>
-    </ul>
-    <p><br />
-    </p>
+
+
+</br> </br>
+
+
+
+
+<div class="col-sm-12">
+  <h1 style="text-align: center;">Contactenos</h1>
+  <div class="contact" id="contact"></div>
+
+  <form method="get" action="http://www.google.co.uk/custom" target="google_window">
+   
+    <div>
+      <label for="nombre">Nombre:</label> <input type="text" name="nombre" id="nombre" placeholder="Su nombre">
+    </div>
+    <div>
+      <label for="email">Correo:</label> <input type="text" name="email" id="email" placeholder="joe@example.com">
+    </div>
+  
+    <div>
+      <label for="asunto">Asunto:</label> <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+    </div>
+
+    <div>
+      <label for="mensaje">Mensaje:</label> <textarea name="mensaje" id="mensaje" > </textarea>
+    </div>
+
+
+    
+  </form>
+  
   </div>
 </div>
+
+
+<div class="col-sm-8">
+
+    <h2 style="text-align: center;">Nuestra ubicación</h2>
+
+  <img src="style1/template-images/mapa.png"
+     alt="Ubicación de la fundación">
+</div>
+
+<div class="col-sm-4">
+    <h3 style="text-align: center;">Información de contacto</h3>
+
+    <h5 style="text-align: center;">Teléfono: 8888 - 8888</h5>
+    <h5 style="text-align: center;">Dirección de correo electrónico: info@fundacion.org.cr</h5>
+     
+</div>
+
+</br>
+</br>
+
+
+
+
+
 <!-- // CONTENT END -->
 <!-- // FOOTER START -->
 <div id="footercontainer">
-  <div id="linkbuttons"> <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/website-design-comply-wcag.gif" alt="" width="88" height="31" border="0" align="left" /></a> | <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/accessibility-101.gif" align="right" alt="" width="88" height="31" /></a> | <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/web-design-directory.gif" align="right" alt="" width="88" height="31" /></a></div>
   <strong class="mediumfont">Telephone XXX XXX XXX </strong><strong> <br />
   <br />
   Accessible website design is basically 'good website design' - RNIB<br />
