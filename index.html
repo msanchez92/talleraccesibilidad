@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
-<title>Accessibility 101</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Fundación FUPERCIBV</title>
+<meta http-equiv="Content-Type" content="text/html; utf-8" />
 <meta http-equiv="Content-Language" content="en-GB" />
 <link rel="stylesheet" href='style1/screen.css' type="text/css" />
 <style type="text/css" media="screen">
@@ -10,6 +10,35 @@
 @import url("style1/p7pmh8.css");
 -->
 </style>
+<script>
+  function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+  </script>
 </head>
 <body onload="P7_initPM(1,8,0,0,10)">
 <div id="header-holder">
@@ -31,63 +60,15 @@
 </div>
 <div id="pagecontent">
   <div id="deflhs">
-    <blockquote class="floatblockquote"> You now have a legal obligation - following the implementation of section 21 of the Disability Discrimination Act - to make reasonable adjustments to ensure blind and partially sighted people can access your service. <strong>RNIB, 2005 </strong></blockquote>
-    <h1>Here's your free template! </h1>
-    <p>This is just an example of what you can do with css. </p>
-    <h2>Do you have an accessible site? </h2>
-    <p>All you need to do is leave one of the accessibility badges (or buttons at the foot of the page) on the template and you can do what you want with it! </p>
-    <blockquote>A disabled person can make a claim against you if your website makes it impossible or unreasonably difficult to access information and services. If you have not made reasonable adjustments and cannot show that this failure is justified, then you may be liable under the Act, and may have to pay compensation and be ordered by a court to change your site. <strong>RNIB 2005</strong> </blockquote>
-    <h2>Enjoy!</h2>
-    <code> <strong>We've added a few things over the last year so you can easily highlight regions, like so!</strong></code> </div>
-  <div id="defrhs2"><br />
-    <h3>Web Design Articles </h3>
-    <ul title="Recent Website Design Articles">
-      <li><a href="http://all-free-download.com/free-website-templates/">Web Accessibility Fact Sheet </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">PAS 78</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">SENDA Compliant Website Design </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">CSS Tips Sheet </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">What is the Best Screen Size to Design To? </a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">What is the Best Font to Use? And Which Size? </a></li>
-    </ul>
-    <p><br />
-    </p>
-  </div>
+    <h1>Bienvenidos a la Fundación FUPERCIBV</h1>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu.</p>
 </div>
 <!-- // CONTENT END -->
 <!-- // FOOTER START -->
 <div id="footercontainer">
-  <div id="linkbuttons"> <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/website-design-comply-wcag.gif" alt="" width="88" height="31" border="0" align="left" /></a> | <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/accessibility-101.gif" align="right" alt="" width="88" height="31" /></a> | <a href="http://all-free-download.com/free-website-templates/"><img src="style1/template-images/web-design-directory.gif" align="right" alt="" width="88" height="31" /></a></div>
-  <strong class="mediumfont">Telephone XXX XXX XXX </strong><strong> <br />
+  <strong class="mediumfont">Telefono: 88888888 </strong><strong> <br />
   <br />
-  Accessible website design is basically 'good website design' - RNIB<br />
-  </strong>Accessibility 101 - Accessible Web Site Design information<br />
-  <strong>Contact Us; <a href="mailto:info@accessibility101.org.uk">info@accessibility101.org.uk</a></strong> <br />
-  <script language="JavaScript" type="text/javascript">
-<!--//Date Stamp
-		var dayArray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-		var monthArray = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-		var lastUpdate = new Date(document.lastModified);
-		var thisDay=dayArray[lastUpdate.getDay()];
-		var thisDate=lastUpdate.getDate() < 10 ? '0'+lastUpdate.getDate() : lastUpdate.getDate();
-		var thisMonth=monthArray[lastUpdate.getMonth()];
-		var thisMonthNum=lastUpdate.getMonth()+1 < 10 ? '0'+ (lastUpdate.getMonth()+1) : lastUpdate.getMonth()+1;
-		var thisFullYear=String(lastUpdate.getFullYear());
-		var thisYear= thisFullYear.charAt(2) + thisFullYear.charAt(3);
-
-		document.write("Updated  ");
-		document.write(thisDay + ', ' + thisDate + '/' + thisMonthNum + '/' + thisYear);
-//-->
-   </script>
-  <div id="footerlinks">
-    <ul>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-      <li><a href="http://all-free-download.com/free-website-templates/">Footerlink</a></li>
-    </ul>
-  </div>
+  <strong>Contactenos: <a href="mailto:info@fundacion.org.cr">info@fundacion.org.uk</a></strong> <br />
+  <strong>Direccion: </strong><span> Outlet Mall en San Pedro Montes de Oca</span>
 </div>
-<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
 </html>
