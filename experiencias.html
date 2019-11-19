@@ -10,35 +10,6 @@
 @import url("style1/p7pmh8.css");
 -->
 </style>
-<script>
-  function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /* Exit the function: */
-      return;
-    }
-  }
-}
-  </script>
 </head>
 <body onload="P7_initPM(1,8,0,0,10)">
 <div id="header-holder">
@@ -60,8 +31,16 @@
 </div>
 <div id="pagecontent">
   <div id="deflhs">
-    <h1>Bienvenidos a la Fundación FUPERCIBV</h1>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu.</p>
+    <h1>Perro Guia Luka</h1>
+
+    <img src="./style1/template-images/perro guía Luka.jpg" alt="Perro guia Luka"> 
+  <p>Nombre: Luka</p>
+ <p>Raza: Golden Retriever</p>
+ <p>Edad: 4 años</p>
+ <p>Experiencia: 1 año</p>
+<p>Descripción: Luka es un perro amigable. Es muy atento en su trabajo y acostumbra a acompañar a su persona en todo momento.
+    Luka tiene experiencia en el apoyo a niños y jóvenes con problemas de visión. En toda su vida ha guiado a 3 personas.
+    </p>
 </div>
 <!-- // CONTENT END -->
 <!-- // FOOTER START -->
